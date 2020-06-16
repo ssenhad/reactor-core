@@ -1746,7 +1746,7 @@ public abstract class Mono<T> implements CorePublisher<T> {
 	public Optional<T> blockOptional(Duration timeout) {
 		BlockingOptionalMonoSubscriber<T> subscriber = new BlockingOptionalMonoSubscriber<>();
 		subscribe((Subscriber<T>) subscriber);
-		return subscriber.blockingGet(timeout.toMillis(), TimeUnit.MILLISECONDS);
+		return subscriber.blockingGet(timeout.toNanos(), TimeUnit.NANOSECONDS);
 	}
 
 	/**
