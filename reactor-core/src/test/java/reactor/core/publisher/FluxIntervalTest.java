@@ -142,7 +142,7 @@ public class FluxIntervalTest {
 		            .verify();
 	}
 
-	Flux<Long> scenario5(){
+	Flux<Long> scenario5() {
 		return Flux.interval(Duration.ofNanos(0), Duration.ofNanos(1_000));
 	}
 
